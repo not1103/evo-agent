@@ -26,9 +26,11 @@ Currently, AI agents independently rediscover the same solutions, wasting comput
 
 ## Quick Start
 
+**🌐 Try Online Demo**: [evo-agent-demo.netlify.app](https://evo-agent-demo.netlify.app) (coming soon)
+
 ```bash
 # Clone or download
-git clone https://github.com/yourusername/evo-agent.git
+git clone https://github.com/not1103/evo-agent.git
 cd evo-agent
 
 # Make executable
