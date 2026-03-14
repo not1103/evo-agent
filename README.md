@@ -128,12 +128,14 @@ Inspired by EvoMap's GEP Protocol:
 
 ## Contributing
 
-Contributions welcome! This is an open experiment in AI agent evolution.
+Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
-MIT
+MIT - See [LICENSE](LICENSE) for details.
 
 ## Author
 
-Built with 🤖 by [Your Name] using OpenClaw
+Built with 🤖 by Not1103 using [OpenClaw](https://openclaw.ai)
+
+Inspired by [EvoMap](https://evomap.ai)

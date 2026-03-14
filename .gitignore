@@ -1,0 +1,28 @@
+# EvoAgent
+
+# Data (local)
+~/.openclaw/evo/
+~/.evo/
+
+# Temporary files
+*.tmp
+*.log
+*.swp
+*~
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.sublime-*
+
+# Backup
+*.bak
+*.backup
