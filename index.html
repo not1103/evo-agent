@@ -13,36 +13,30 @@
             min-height: 100vh;
             padding: 20px;
         }
-        .container { max-width: 800px; margin: 0 auto; }
+        .container { max-width: 900px; margin: 0 auto; }
         
         header {
             text-align: center;
-            padding: 60px 0;
+            padding: 40px 0;
         }
         h1 {
             font-size: 4em;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
-        h1 span { animation: pulse 2s infinite; }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        
         .tagline {
-            font-size: 1.5em;
+            font-size: 1.3em;
             color: #a0a0ff;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         
         .btn {
             display: inline-block;
-            padding: 15px 40px;
+            padding: 12px 30px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.2em;
+            font-size: 1em;
             font-weight: bold;
             margin: 10px;
             transition: transform 0.2s;
@@ -56,30 +50,31 @@
         section {
             background: rgba(255,255,255,0.05);
             border-radius: 20px;
-            padding: 40px;
-            margin: 30px 0;
+            padding: 30px;
+            margin: 25px 0;
         }
         
         h2 { 
             color: #667eea;
-            margin-bottom: 20px;
-            font-size: 2em;
+            margin-bottom: 15px;
+            font-size: 1.8em;
         }
         
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
         }
         .feature {
             background: rgba(255,255,255,0.1);
-            padding: 25px;
-            border-radius: 15px;
+            padding: 20px;
+            border-radius: 12px;
             text-align: center;
         }
-        .feature-icon { font-size: 3em; margin-bottom: 15px; }
-        .feature h3 { color: #a0a0ff; margin-bottom: 10px; }
+        .feature-icon { font-size: 2.5em; margin-bottom: 10px; }
+        .feature h3 { color: #a0a0ff; margin-bottom: 8px; font-size: 1.1em; }
+        .feature p { font-size: 0.9em; color: #ccc; }
         
         code {
             background: #0f0f23;
@@ -89,53 +84,121 @@
         }
         pre {
             background: #0f0f23;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             overflow-x: auto;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+        
+        .terminal {
+            background: #1a1a2e;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+            border: 1px solid #333;
+        }
+        .terminal-header {
+            background: #0f0f23;
+            padding: 10px 15px;
+            display: flex;
+            gap: 8px;
+        }
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+        .terminal-title {
+            flex: 1;
+            text-align: center;
+            color: #666;
+            font-size: 0.85em;
+        }
+        .terminal-body {
+            padding: 15px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9em;
+        }
+        
+        .ascii-art {
+            color: #667eea;
+            font-family: monospace;
+            white-space: pre;
+            font-size: 0.7em;
+            line-height: 1.2;
+            text-align: center;
             margin: 20px 0;
         }
         
-        .demo-box {
-            background: #0f0f23;
+        .flow-diagram {
+            background: rgba(102, 126, 234, 0.1);
             border-radius: 15px;
-            padding: 30px;
+            padding: 20px;
             margin: 20px 0;
+            text-align: center;
         }
-        .demo-input { color: #98fb98; }
-        .demo-output { color: #ffd700; }
+        .flow-step {
+            display: inline-block;
+            background: #667eea;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 5px;
+            font-size: 0.9em;
+        }
+        .flow-arrow {
+            color: #667eea;
+            font-size: 1.5em;
+            margin: 0 10px;
+        }
         
         footer {
             text-align: center;
-            padding: 40px;
+            padding: 30px;
             color: #666;
+            font-size: 0.9em;
         }
         
         .stats {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            margin: 30px 0;
+            gap: 30px;
+            margin: 20px 0;
         }
         .stat { text-align: center; }
-        .stat-number { font-size: 3em; font-weight: bold; color: #667eea; }
-        .stat-label { color: #a0a0ff; }
+        .stat-number { font-size: 2.5em; font-weight: bold; color: #667eea; }
+        .stat-label { color: #a0a0ff; font-size: 0.9em; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>EvoAgent <span>🧬</span></h1>
+            <pre class="ascii-art">
+   _______                  _             
+  |__   __|                (_)            
+     | | ___ _ __ _ __ ___  _ _ __   __ _ 
+     | |/ _ \ '__| '_ ` _ \| | '_ \ / _` |
+     | |  __/ |  | | | | | | | | | | (_| |
+     |_|\___|_|  |_| |_| |_|_|_| |_|\__,_|
+                                        
+   _____ _                             
+  / ____| |                            
+ | |    | |__   ___  ___ _ __ ___   ___ 
+ | |    | '_ \ / _ \/ __| '_ ` _ \ / _ \
+ | |____| | | |  __/ (__| | | | | |  __/
+  \_____|_| |_|\___|\___|_| |_| |_|\___|
+            </pre>
             <p class="tagline">Open-source AI Agent Experience Evolution System</p>
             <div>
-                <a href="https://github.com/not1103/evo-agent" class="btn">View on GitHub</a>
+                <a href="https://github.com/not1103/evo-agent" class="btn">⭐ Star on GitHub</a>
                 <a href="#demo" class="btn btn-secondary">Try Demo</a>
             </div>
         </header>
         
         <section>
-            <h2>What is EvoAgent?</h2>
-            <p>EvoAgent is an open-source system inspired by <a href="https://evomap.ai" style="color:#667eea">EvoMap</a> that enables AI agents to record, share, and evolve through collective intelligence.</p>
-            
             <div class="stats">
                 <div class="stat">
                     <div class="stat-number">7</div>
@@ -153,95 +216,117 @@
         </section>
         
         <section>
+            <h2>🧬 How It Works</h2>
+            <div class="flow-diagram">
+                <span class="flow-step">💡 Problem</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">🛠️ Solution</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">📝 Record</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">🔍 Search</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">🧬 Evolve</span>
+            </div>
+        </section>
+        
+        <section>
             <h2>✨ Features</h2>
             <div class="features">
                 <div class="feature">
                     <div class="feature-icon">📝</div>
                     <h3>Record</h3>
-                    <p>Save successful solutions as Gene + Capsule bundles</p>
+                    <p>Save solutions as Gene + Capsule</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🔍</div>
                     <h3>Search</h3>
-                    <p>Semantic search across all experiences</p>
+                    <p>Semantic search</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">💡</div>
                     <h3>Suggest</h3>
-                    <p>AI-powered solution suggestions</p>
+                    <p>AI suggestions</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🌐</div>
                     <h3>API</h3>
-                    <p>HTTP API for agent integration</p>
+                    <p>HTTP API</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🏪</div>
                     <h3>Marketplace</h3>
-                    <p>Local experience marketplace</p>
+                    <p>Share & trade</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🤖</div>
                     <h3>Auto-Detect</h3>
-                    <p>Automatically detect task types</p>
+                    <p>Smart typing</p>
                 </div>
             </div>
         </section>
         
         <section id="demo">
-            <h2>🎮 Try It</h2>
-            <div class="demo-box">
-                <pre>$ ./evo.sh record coding "fix gateway pairing" "removed paired.json" success 8
-✅ Recorded: evo_xxx | Type: coding | Quality: 8/10</pre>
-                
-                <pre>$ ./evo.sh search "gateway error"
+            <h2>🎮 Demo</h2>
+            
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-red"></span>
+                    <span class="terminal-dot dot-yellow"></span>
+                    <span class="terminal-dot dot-green"></span>
+                    <span class="terminal-title">evo-agent</span>
+                </div>
+                <div class="terminal-body">
+                    <pre style="margin:0">$ ./evo.sh record coding "fix gateway pairing" "removed paired.json" success 8
+✅ Recorded: evo_1773474026 | Type: coding | Quality: 8/10</pre>
+                </div>
+            </div>
+            
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-red"></span>
+                    <span class="terminal-dot dot-yellow"></span>
+                    <span class="terminal-dot dot-green"></span>
+                    <span class="terminal-title">evo-agent</span>
+                </div>
+                <div class="terminal-body">
+                    <pre style="margin:0">$ ./evo.sh search "gateway error"
 🔍 Search: gateway error
-🎯 Best Match: evo_xxx (Score: 18)
-## Problem
-gateway pairing issue</pre>
-                
-                <pre>$ ./evo.sh share evo_xxx
-# EvoAgent Experience: evo_xxx
-## Metadata
-- Type: coding
-- Quality: 8/10
+🎯 Best Match: evo_1773474026 (Score: 18)
 ## Problem
 gateway pairing issue
 ## Solution
 removed paired.json and manually added entry</pre>
+                </div>
+            </div>
+            
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-red"></span>
+                    <span class="terminal-dot dot-yellow"></span>
+                    <span class="terminal-dot dot-green"></span>
+                    <span class="terminal-title">evo-agent</span>
+                </div>
+                <div class="terminal-body">
+                    <pre style="margin:0">$ ./evo.sh stats
+📊 EvoAgent v0.7
+Total: 6 | Success: 6</pre>
+                </div>
             </div>
         </section>
         
         <section>
             <h2>🚀 Quick Start</h2>
-            <pre><code># Clone
-git clone https://github.com/not1103/evo-agent.git
+            <pre><code>git clone https://github.com/not1103/evo-agent.git
 cd evo-agent
-
-# Make executable
 chmod +x evo.sh
-
-# Record your first experience
 ./evo.sh record coding "your problem" "your solution" success 8</code></pre>
         </section>
         
-        <section>
-            <h2>📖 Commands</h2>
-            <div class="demo-box">
-                <pre>./evo.sh record <type> <problem> <solution> <outcome> [quality]  # Record
-./evo.sh list                                           # List all
-./evo.sh search <query>                                 # Search
-./evo.sh suggest <task>                                 # Get suggestions
-./evo.sh share <id>                                     # Share
-./evo.sh api                                           # Start API server
-./evo.sh stats                                         # Stats</pre>
-            </div>
-        </section>
-        
         <footer>
-            <p>Built with 🤖 using <a href="https://openclaw.ai" style="color:#667eea">OpenClaw</a></p>
+            <p>🧬 Built with 🤖 using <a href="https://openclaw.ai" style="color:#667eea">OpenClaw</a></p>
             <p>Inspired by <a href="https://evomap.ai" style="color:#667eea">EvoMap</a></p>
-            <p>Open Source • MIT License</p>
+            <p>⭐ Star on GitHub: <a href="https://github.com/not1103/evo-agent" style="color:#667eea">not1103/evo-agent</a></p>
         </footer>
     </div>
 </body>
