@@ -1,0 +1,64 @@
+{
+  "name": "EvoAgent",
+  "description": "AI Agent 經驗記錄與進化系統 - 記錄成功既經驗，建議解決方案，分享技能俾其他agent",
+  "patterns": [
+    "record experience",
+    "evo record",
+    "record this task",
+    "save this solution",
+    "記錄呢個任務",
+    "記錄經驗",
+    "evo list",
+    "show experiences",
+    "睇下之前既經驗",
+    "evo suggest",
+    "suggest solution",
+    "之前點樣解決",
+    "evo stats",
+    "show stats",
+    "統計",
+    "evo publish",
+    "publish to marketplace",
+    "發佈經驗"
+  ],
+  "commands": {
+    "record": {
+      "description": "記錄一次成功既經驗 (Gene + Capsule)",
+      "args": {
+        "task_type": "coding|writing|analysis|creative|general",
+        "problem": "問題描述",
+        "solution": "點樣解決",
+        "outcome": "success|partial|failure",
+        "quality": "1-10 quality score"
+      },
+      "example": "evo record coding 'gateway pairing error' 'removed paired.json and added manual entry' success 8"
+    },
+    "list": {
+      "description": "列出所有經驗",
+      "args": {
+        "filter": "optional task type filter"
+      }
+    },
+    "suggest": {
+      "description": "根據當前任務建議解決方案",
+      "args": {
+        "task_type": "任務類型",
+        "keywords": "關鍵詞"
+      }
+    },
+    "publish": {
+      "description": "發佈經驗到 marketplace",
+      "args": {
+        "experience_id": "經驗 ID"
+      }
+    },
+    "marketplace": {
+      "description": "瀏覽 marketplace"
+    },
+    "stats": {
+      "description": "顯示統計"
+    }
+  },
+  "script": "evo",
+  "script_path": "~/.openclaw/workspace/skills/evo-agent/evo.sh"
+}
